@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cream: #fdf6e3;
+  --ink: #2d2d2d;
+  --accent: #e84a4a;
+  --accent2: #4a90e2;
+  --muted: #888;
+  --border: #2d2d2d;
+  --card-bg: #fff;
+  --nav-bg: #2d2d2d;
+  --btn-yellow: #f5c842;
+  --btn-green: #4caf50;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+nav {
+  background: var(--nav-bg);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 56px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+nav .logo {
+  font-family: "Fredoka One", cursive;
+  font-size: 1.6rem;
+  color: var(--btn-yellow);
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+nav .nav-links {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+nav .nav-links a,
+nav .nav-links button {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 6px 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+nav .nav-links a:hover,
+nav .nav-links button:hover {
+  color: var(--btn-yellow);
+}
+nav .nav-links a.active {
+  color: var(--btn-yellow);
+  border-bottom: 2px solid var(--btn-yellow);
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 14px;
+  font-family: "Nunito", sans-serif;
+  border: 2px solid var(--border);
+  box-shadow: 3px 3px 0 var(--border);
+  background: var(--btn-yellow);
+  color: var(--ink);
+  cursor: pointer;
+}
+.btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--border);
+}
+.btn-red {
+  background: var(--accent);
+  color: #fff;
+}
+.btn-blue {
+  background: var(--accent2);
+  color: #fff;
+}
+.btn-green {
+  background: var(--btn-green);
+  color: #fff;
+}
+.btn-gray {
+  background: #ccc;
+  color: var(--ink);
+}
+.btn-sm {
+  padding: 3px 8px;
+  font-size: 0.8rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid var(--border);
+  background: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  border-radius: 0;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent2);
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.page-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.page-header h1 {
+  font-family: "Fredoka One", cursive;
+  font-size: 2rem;
+}
+
+.empty-state {
+  color: var(--muted);
+}
+
+.empty-state .emoji {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--nav-bg);
+  color: #fff;
+  padding: 12px 20px;
+  border: 2px solid var(--border);
+  box-shadow: 4px 4px 0 var(--border);
+  font-weight: 700;
+  font-size: 0.95rem;
+  z-index: 9999;
+  display: none;
+}
+.toast.show {
+  display: block;
+  animation: slideIn 0.3s ease;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.spinner {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.5rem;
+  color: var(--muted);
+}
+.tag {
+  display: inline-block;
+  background: var(--btn-yellow);
+  border: 1.5px solid var(--border);
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-right: 6px;
+}
+.heart {
+  font-size: 1.3rem;
+  transition: transform 0.2s;
+}
+.heart.liked {
+  color: var(--accent);
+  transform: scale(1.2);
+}

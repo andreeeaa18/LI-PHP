@@ -1,0 +1,216 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 1rem;
+}
+.modal {
+  background: #fff;
+  border: 3px solid var(--border);
+  box-shadow: 8px 8px 0 var(--border);
+  width: 680px;
+  max-width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+.modal-header {
+  padding: 1.2rem 1.5rem;
+  border-bottom: 2px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.modal-header h2 {
+  font-family: "Fredoka One", cursive;
+  font-size: 1.5rem;
+  flex: 1;
+}
+.modal-close {
+  background: var(--accent);
+  border: 2px solid var(--border);
+  color: #fff;
+  font-size: 1.2rem;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+.modal-close:hover {
+  background: #c0392b;
+}
+.modal-img {
+  width: 100%;
+
+  object-fit: cover;
+  border-bottom: 2px solid var(--border);
+  display: block;
+}
+.modal-body {
+  padding: 1.2rem 1.5rem;
+}
+.modal-body p {
+  line-height: 1.7;
+  color: #333;
+  white-space: pre-wrap;
+}
+.modal-actions {
+  padding: 0.8rem 1.5rem;
+  border-top: 2px solid var(--border);
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.modal-actions-right {
+  margin-left: auto;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.like-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.like-btn-flat {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+.like-btn-flat:hover {
+  background: none;
+  box-shadow: none;
+  transform: none;
+}
+.like-btn-flat:active {
+  transform: none;
+  box-shadow: none;
+}
+
+.comment-display {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.btn-report {
+  padding: 3px 8px;
+  font-size: 0.8rem;
+}
+
+.comments-section {
+  padding: 1rem 1.5rem 1.5rem;
+}
+.comments-section h3 {
+  margin-bottom: 0.8rem;
+}
+.comment-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.comment-form input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 2px solid var(--border);
+  font-family: "Nunito", sans-serif;
+  font-size: 0.95rem;
+  border-radius: 0;
+  outline: none;
+}
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.comment-item {
+  border: 2px solid var(--border);
+  padding: 0.7rem;
+  background: #fafafa;
+  position: relative;
+}
+.comment-item.reply {
+  margin-left: 1.5rem;
+  background: #f0f0f0;
+  border-left: 4px solid var(--accent2);
+}
+.comment-author {
+  font-weight: 700;
+  color: var(--accent2);
+  font-size: 0.88rem;
+}
+.comment-text {
+  margin: 0.2rem 0 0.4rem;
+  font-size: 0.93rem;
+}
+.comment-meta {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.reply-form {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.4rem;
+}
+.reply-form input {
+  flex: 1;
+  padding: 5px 8px;
+  border: 2px solid var(--border);
+  font-family: "Nunito", sans-serif;
+  font-size: 0.88rem;
+  border-radius: 0;
+  outline: none;
+}
+
+.btn-reply {
+  background: none;
+  border: none;
+  box-shadow: none;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #615e5e;
+
+  transition: color 0.15s;
+}
+.btn-reply:hover {
+  color: #888;
+  background: none;
+  box-shadow: none;
+}
+
+.create-post-box {
+  background: #fff;
+  border: 3px solid var(--border);
+  box-shadow: 6px 6px 0 var(--border);
+  padding: 2rem;
+  max-width: 640px;
+  margin: 2rem auto;
+}
+.create-post-box h2 {
+  font-family: "Fredoka One", cursive;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}

@@ -1,0 +1,54 @@
+.profile-layout {
+  display: flex;
+  min-height: calc(100vh - 56px);
+}
+
+.profile-sidebar {
+  width: 280px;
+  background: var(--nav-bg);
+  color: #fff;
+  padding: 2rem 1.5rem;
+  position: fixed;
+  height: calc(100vh - 56px);
+  left: 0;
+  top: 56px;
+}
+
+.profile-sidebar .logo-title {
+  font-family: "Fredoka One", cursive;
+  font-size: 1.5rem;
+  color: var(--btn-yellow);
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-info img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+.profile-info h2 {
+  font-family: "Fredoka One", cursive;
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem 0;
+  color: #fff;
+}
+
+.profile-info p {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.profile-content {
+  margin-left: 280px;
+  flex: 1;
+  padding: 0;
+}

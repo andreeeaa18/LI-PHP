@@ -1,0 +1,45 @@
+.auth-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cream);
+}
+.auth-box {
+  background: #fff;
+  border: 3px solid var(--border);
+  box-shadow: 6px 6px 0 var(--border);
+  padding: 2.5rem 2rem;
+  width: 360px;
+  max-width: 95%;
+}
+.auth-box h1 {
+  font-family: "Fredoka One", cursive;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+}
+.auth-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.5rem;
+}
+.auth-tab {
+  flex: 1;
+  padding: 8px;
+  background: #eee;
+  border: 2px solid var(--border);
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+}
+.auth-tab.active {
+  background: var(--btn-yellow);
+}
+.auth-error {
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}

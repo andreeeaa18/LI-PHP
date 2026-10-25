@@ -1,0 +1,187 @@
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.game-card {
+  background: #fff;
+  border: 3px solid var(--border);
+  box-shadow: 5px 5px 0 var(--border);
+  padding: 2rem 1.5rem;
+  cursor: pointer;
+  transition:
+    transform 0.1s,
+    box-shadow 0.1s;
+  text-align: center;
+}
+.game-card .game-icon {
+  font-size: 3.5rem;
+  margin-bottom: 0.8rem;
+}
+.game-card h3 {
+  font-family: "Fredoka One", cursive;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.game-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.game-icon-img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  margin-bottom: 0.8rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.drawing-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.color-palette {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.obj-color {
+  width: 36px;
+  height: 36px;
+  border: 2px solid transparent;
+  box-shadow: 2px 2px 0 var(--border);
+}
+.drawing-grid {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  border: 2px solid var(--border);
+  box-shadow: 4px 4px 0 var(--border);
+  user-select: none;
+  cursor: crosshair;
+  background: #fff;
+}
+.grid-cell {
+  aspect-ratio: 1;
+  border: 0.5px solid rgba(0, 0, 0, 0.07);
+}
+.drawing-controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 10px;
+}
+.gallery {
+  margin-top: 2rem;
+}
+.gallery h2 {
+  font-family: "Fredoka One", cursive;
+  margin-bottom: 1rem;
+}
+.gallery-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.gallery-item {
+  border: 2px solid var(--border);
+  box-shadow: 3px 3px 0 var(--border);
+  overflow: hidden;
+  background: #fff;
+}
+.gallery-thumbnail {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  width: 120px;
+  height: 120px;
+  border-bottom: 2px solid var(--border);
+  cursor: pointer;
+}
+.gallery-thumbnail .grid-cell {
+  border: none;
+}
+.gallery-item-actions {
+  padding: 6px;
+  display: flex;
+  gap: 4px;
+}
+
+.typing-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.typing-text-box {
+  background: #fff;
+  border: 2px solid var(--border);
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  margin-bottom: 1rem;
+  box-shadow: 2px 2px 0 var(--border);
+  min-height: 80px;
+  width: 840px;
+}
+.typing-text-box .char-correct {
+  color: #4caf50;
+}
+.typing-text-box .char-wrong {
+  color: var(--accent);
+  background: #ffe0e0;
+}
+.typing-text-box .char-pending {
+  color: #999;
+}
+.typing-input {
+  width: 840px;
+  padding: 12px;
+  font-size: 1rem;
+  font-family: "Nunito", sans-serif;
+  border-radius: 0;
+}
+.typing-stats {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.timer.warning {
+  color: #e67e22;
+  animation: pulse 0.8s infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+.game-result {
+  text-align: center;
+  padding: 2rem;
+  border: 3px solid var(--border);
+  box-shadow: 6px 6px 0 var(--border);
+  background: #fff;
+  margin-top: 1rem;
+}
+.game-result h2 {
+  font-family: "Fredoka One", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.game-result.win h2 {
+  color: #4caf50;
+}
+.game-result.lose h2 {
+  color: var(--accent);
+}
+
+.cat-frame {
+  width: 100%;
+  height: 600px;
+  border: 3px solid var(--border);
+  box-shadow: 5px 5px 0 var(--border);
+}
